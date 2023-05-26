@@ -1,0 +1,21 @@
+{
+	"filetype" : "C74Snapshot",
+	"version" : 2,
+	"minorversion" : 0,
+	"name" : "ValhallaUberMod",
+	"origin" : "ValhallaUberMod_x64.dll",
+	"type" : "VST",
+	"subtype" : "AudioEffect",
+	"embed" : 0,
+	"snapshot" : 	{
+		"pluginname" : "ValhallaUberMod_x64.dll",
+		"plugindisplayname" : "ValhallaUberMod",
+		"pluginsavedname" : "C:/Program Files/VstPlugins/ValhallaDSP/ValhallaUberMod_x64.dll",
+		"pluginsaveduniqueid" : 0,
+		"version" : 1,
+		"isbank" : 0,
+		"isbase64" : 1,
+		"blob" : "973.CMlaKA....fQPMDZ....ATmXkIG.ADfA....A........................................LPjVMjLgf3....O+fWarAhckI2bo8la8HRLt.iHfTlai8FYo41Y8HRUTYTK3HxO9.BOVEFanEFarEVUhUlbM8FYf.Ga0cVZtYUYxMWZu4VOhDiKw3hMh.BbxU1bkQmSg0VY8HhUoIlbgQ2afLiHfzTZ30iHv3BLh.BQkAGcn0iHv3hM2TSN4jSN4jCLzXyLxTyMh.xTzUlbk81UoQFcn0iHv3hMvTCM4jSN3HCNyLCN1HyLh.BQkwVX40iHv3BLv.CL4jSN4jSN4bCM2LyM3bSMxHBHFUVYjIVXisVOh.iKvHBHSAmbkEFY8HBLt.iHfLEauAWY8HBLtTiHfL0ZkcWOh.iK0HBHRElaj8Va8HBLt.iHfPUXvcTXo4VOh.iK0HBHDklYlU2bo8la8HBLt.iHfPTZlY1TooWY8HBLt.iLzPCN4bSN0bCN4DiLxTCNh.BQoYlYM8FYREFck0iHv3BLh.BQoYlYM8FYDUFbzgVOh.iKvHBHL81cCUGc8HBLtDSM0byM3fSN4bCN3fSM1TiHffTZmg1P0QWOh.iK0jSL4TSN2bCMzjCMwbSLwHBHSAWXzkVXrg0a1Ulb8HBLtXCMyHSL1.yMyTSLy.yLwHBHDUFc04VYREFck0iHv3BLh.BQkQWctUFQkAGcn0iHv3BLh.hUoIlbgQ2aREFck0iHv3xLyfyLzTCN0TCM2PCM2HiHfXUZhIWXz8FQkAGcn0iHv3RM4HCLv.CLvbiMxjyL4PSMh.xS1UlbM8FY8HBLt.iHfPjboYWYI41Qgkla8HBLtbiL4DiM1XCN1TyLzfCNwXiHfPjboYWYOUGcGEVZt0iHv3RM0fyLyLyLybyLvXSN2XyLh.BQxklck4zaoMWYGEVZt0iHv3BL0byM2byM2byLwPSL3XSLh.hQkUFYhE1XqI0azEFck0iHv3RMh.xTs81azgVZtcFUo0VY8HBLt.SN4.SN4.SN4XyL1.yM2fCNh.xPuw1ax0zajUVOhDiKvHBHDUFagk2T441X8HBLt.iHfPWdvUVOh.iKx.CNyLyLyHCNyXiMxbSN1HBHDklYlUjagIFak0iHv3BLh.BQxklck0iHw3BLh.BQxklckAkbkA0ayQWOhDiKvHBHSAWYkQVOh.iKvHBHI4Fb0QGTg4VOh.iKvHBHskFdL81Xq0iHvHBH0k1UoQFcn0iH1bCLh.RcogTYocFZz0iHyXSMh7hO.."
+	}
+
+}
