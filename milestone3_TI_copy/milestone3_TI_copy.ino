@@ -15,16 +15,21 @@ const int buttonPin2 = 5;  // Pin connected to button 2
 const int buttonPin3 = 7;  // Pin connected to button 3
 const int buttonPin4 = 6;  // Pin connected to button 4
 
-//button states
-int buttonState1 = 0;  // Variable to store the state of button 1
-int buttonState2 = 0;  // Variable to store the state of button 2
-int buttonState3 = 0;  // Variable to store the state of button 3
-int buttonState4 = 0;  // Variable to store the state of button 4
+int ButtonState1 = HIGH;  // Variable to store the previous state of button 1
+int ButtonState2 = HIGH;  // Variable to store the previous state of button 2
+int ButtonState3 = HIGH;  // Variable to store the previous state of button 3
+int ButtonState4 = HIGH;  // Variable to store the previous state of button 4
 
-int lastButtonState1 = 0;  // Variable to store the previous state of button 1
-int lastButtonState2 = 0;  // Variable to store the previous state of button 2
-int lastButtonState3 = 0;  // Variable to store the previous state of button 3
-int lastButtonState4 = 0;  // Variable to store the previous state of button 4
+int lastButtonState1 = HIGH;  // Variable to store the previous state of button 1
+int lastButtonState2 = HIGH;  // Variable to store the previous state of button 2
+int lastButtonState3 = HIGH;  // Variable to store the previous state of button 3
+int lastButtonState4 = HIGH;  // Variable to store the previous state of button 4
+
+int value1 = 0;
+int value2 = 0;
+int value3 = 0;
+int value4 = 0;
+
 
 void setup() {
   Serial.begin(9600);  //reading the present state of the button */
@@ -51,54 +56,6 @@ void loop() {
   x2Value = analogRead(VRX_PIN2);
   y2Value = analogRead(VRY_PIN2);
 
-  buttonState1 = digitalRead(buttonPin1);  // Read the state of button 1
-  buttonState2 = digitalRead(buttonPin2);  // Read the state of button 2
-  buttonState3 = digitalRead(buttonPin3);  // Read the state of button 3
-  buttonState4 = digitalRead(buttonPin4);  // Read the state of button 4
-
-  if (buttonState1 != lastButtonState1) {
-    if (buttonState1 == LOW) {
-      Serial.print("1");  // Button 1 is pressed
-    } else {
-      Serial.print("0");  // Button 1 is released
-    }
-    delay(50);  // Debounce delay
-  }
-  //Spacing to defferientiate data
-  Serial.print(" ");
-
-  if (buttonState2 != lastButtonState2) {
-    if (buttonState2 == LOW) {
-      Serial.print("1");  // Button 1 is pressed
-    } else {
-      Serial.print("0");  // Button 1 is released
-    }
-    delay(50);  // Debounce delay
-  }
-  //Spacing to defferientiate data
-  Serial.print(" ");
-
-  if (buttonState3 != lastButtonState3) {
-    if (buttonState3 == LOW) {
-      Serial.print("1");  // Button 1 is pressed
-    } else {
-      Serial.print("0");  // Button 1 is released
-    }
-    delay(50);  // Debounce delay
-  }
-  //Spacing to defferientiate data
-  Serial.print(" ");
-
-  if (buttonState4 != lastButtonState4) {
-    if (buttonState4 == LOW) {
-      Serial.print("1");  // Button 1 is pressed
-    } else {
-      Serial.print("0");  // Button 1 is released
-    }
-    delay(50);  // Debounce delay
-  }
-  //Spacing to defferientiate data
-  Serial.print(" ");
 
   // print data to Serial Monitor on Arduino IDE
   Serial.print(x1Value);
@@ -121,7 +78,62 @@ void loop() {
   //Spacing to defferientiate data
   Serial.print(" ");
   //pontentionmeter2 value
-  Serial.println(analogRead(A1));
+  Serial.print(analogRead(A1));
+  //Spacing to defferientiate data
+  Serial.print(" ");
+
+  int buttonState1 = digitalRead(buttonPin1);  // Read the state of button 1
+  int buttonState2 = digitalRead(buttonPin2);  // Read the state of button 2
+  int buttonState3 = digitalRead(buttonPin3);  // Read the state of button 3
+  int buttonState4 = digitalRead(buttonPin4);  // Read the state of button 4
+
+  if (buttonState1 != lastButtonState1) {
+    if (buttonState1 == LOW) {
+      value1 = 1 - value1;  // Toggle the value between 0 and 1 when the button is pressed
+    }
+    delay(50);  // Debounce delay
+  }
+  lastButtonState1 = buttonState1;
+  Serial.print(value1);
+
+  //Spacing to defferientiate data
+  Serial.print(" ");
+
+  if (buttonState2 != lastButtonState2) {
+    if (buttonState2 == LOW) {
+      value2 = 1 - value2;  // Toggle the value between 0 and 1 when the button is pressed
+    }
+    delay(50);  // Debounce delay
+  }
+
+  lastButtonState2 = buttonState2;
+  Serial.print(value2);
+
+  //Spacing to defferientiate data
+  Serial.print(" ");
+
+  if (buttonState3 != lastButtonState3) {
+    if (buttonState3 == LOW) {
+      value3 = 1 - value3;  // Toggle the value between 0 and 1 when the button is pressed
+    }
+    delay(50);  // Debounce delay
+  }
+
+  lastButtonState3 = buttonState3;
+  Serial.print(value3);
+
+  //Spacing to defferientiate data
+  Serial.print(" ");
+
+  if (buttonState4 != lastButtonState4) {
+    if (buttonState4 == LOW) {
+      value4 = 1 - value4;  // Toggle the value between 0 and 1 when the button is pressed
+    }
+    delay(50);  // Debounce delay
+  }
+
+  lastButtonState4 = buttonState4;
+  Serial.println(value4);
 
   delay(200);
 }
